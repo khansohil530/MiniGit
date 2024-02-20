@@ -3,13 +3,13 @@ The main purpose is learning the interal working of original VCS `git`.
 
 Commands Available:
 
-- [ ] [`init`](https://git-scm.com/docs/git-init)
+- [x] [`init`](https://git-scm.com/docs/git-init)
+- [x] [`cat-file`](https://git-scm.com/docs/git-cat-file)
+- [x] [`hash-object`](https://git-scm.com/docs/git-hash-object)
 - [ ] [`add`](https://git-scm.com/docs/git-add)
-- [ ] [`cat-file`](https://git-scm.com/docs/git-cat-file)
 - [ ] [`check-ignore`](https://git-scm.com/docs/git-check-ignore)
 - [ ] [`checkout`](https://git-scm.com/docs/git-checkout)
 - [ ] [`commit`](https://git-scm.com/docs/git-commit)
-- [ ] [`hash-object`](https://git-scm.com/docs/git-hash-object)
 - [ ] [`log`](https://git-scm.com/docs/git-log)
 - [ ] [`ls-files`](https://git-scm.com/docs/git-ls-files)
 - [ ] [`ls-tree`](https://git-scm.com/docs/git-ls-tree)
@@ -36,4 +36,9 @@ Commands Available:
 Use `-h` or `--help` flag to list available commands
 ```bash
 src/minigit --help
+```
+
+To get list of available sub commands and options on command
+```bash
+src/minigit {cmd} --help
 ```

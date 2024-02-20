@@ -70,4 +70,17 @@ class GitRepository:
             if vers != 0:
                 raise Exception(f"Unsupported repositoryformatversion {vers}")
     
-        
+
+def repo_find(path=".", required=True):
+    path = os.path.realpath(path)
+    if os.path.isdir(os.path.join(path, GITDIR)):
+        return GitRepository(path)
+    
+    parent = os.path.realpath(os.path.join(path, os.pardir))
+    if parent == path:
+        # base case, path is "/"
+        if required:
+            raise Exception("No git directory.")
+        return
+    
+    return repo_find(parent, required)
